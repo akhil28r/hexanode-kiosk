@@ -53,7 +53,7 @@ function WhyHexnode() {
             <p className="text-lg font-bold border-b-4 border-[#F7F7F7] px-1 pb-7">
               {slides[currentIndex].heading}
             </p>
-            <p className="text-gray-600 mt-5">{slides[currentIndex].name}</p>
+            <p className="text-[#020a19] font-bold text-lg mt-5">{slides[currentIndex].name}</p>
             <p className="text-gray-500 text-sm">
               {slides[currentIndex].title}
             </p>
