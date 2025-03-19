@@ -6,7 +6,6 @@ function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
 
-  // Track scroll position
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -15,15 +14,14 @@ function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Prevent body scrolling when the mobile menu is open
   useEffect(() => {
     document.body.style.overflow = hidden ? "hidden" : "auto";
   }, [hidden]);
 
-  // Navbar styles
-  const navbarStyles = isScrolled || isHovered
-    ? "bg-white text-black border-b border-gray-300"
-    : "bg-[#020A19] text-white border-b border-gray-700"; // Light gray border for desktop
+  const navbarStyles =
+    isScrolled || isHovered
+      ? "bg-white text-black border-b border-gray-300"
+      : "bg-[#020A19] text-white border-b border-gray-700";
 
   return (
     <div
@@ -32,7 +30,6 @@ function Navbar() {
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="tailwind-container mx-auto flex justify-between items-center py-3">
-        {/* Logo */}
         <div className="w-28">
           <img
             src={Logo}
@@ -43,7 +40,6 @@ function Navbar() {
           />
         </div>
 
-        {/* Desktop Button */}
         <div className="hidden lg:block">
           <button
             className={`w-fit px-8 py-3 font-semibold rounded-sm transition-all duration-300 ${
@@ -56,7 +52,6 @@ function Navbar() {
           </button>
         </div>
 
-        {/* Mobile Menu Icon */}
         <div className="block lg:hidden">
           <div onClick={() => setHidden(!hidden)}>
             <svg
@@ -79,10 +74,8 @@ function Navbar() {
             </svg>
           </div>
 
-          {/* Mobile Menu */}
           {hidden && (
             <div className="fixed top-0 right-0 w-full md:max-w-[50%] h-screen bg-white z-50 shadow-lg">
-              {/* Close Button */}
               <div
                 onClick={() => setHidden(!hidden)}
                 className="py-3 flex justify-end pr-6 pt-3 border-b border-black"
@@ -98,7 +91,6 @@ function Navbar() {
                 </svg>
               </div>
 
-              {/* Menu Content */}
               <div className="flex flex-col items-center p-6 gap-5">
                 <button className="border w-full bg-[#dd0735] px-5 py-3 rounded-xl text-white">
                   14 DAYS FREE TRIAL

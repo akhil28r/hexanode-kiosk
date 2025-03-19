@@ -1,4 +1,3 @@
-"use client";
 import React, { useState } from "react";
 import img1 from "../assets/whyHexnode1.webp";
 import img2 from "../assets/whyHexnode2.webp";
@@ -42,7 +41,6 @@ function WhyHexnode() {
       </h1>
 
       <div className="tailwind-container mx-auto relative flex flex-col items-center justify-center  max-w-4xl">
-        {/* Slider Content */}
         <div className="md:w-full z-10 flex flex-col md:flex-row items-center bg-white rounded-2xl shadow-lg overflow-hidden">
           <div className=" w-full  md:w-1/3">
             <img
@@ -62,7 +60,6 @@ function WhyHexnode() {
           </div>
         </div>
 
-        {/* Navigation Arrows */}
         <div className="flex justify-center items-center w-full gap-5 mt-4 lg:hidden">
           <button
             onClick={prevSlide}
@@ -78,7 +75,6 @@ function WhyHexnode() {
           </button>
         </div>
 
-        {/* Arrows for Large Screens */}
         <button
           onClick={prevSlide}
           className="hidden lg:block absolute left-0 w-12 h-12 transform -translate-x-16 z-10 p-3 bg-white text-black rounded-lg shadow-md transition"
