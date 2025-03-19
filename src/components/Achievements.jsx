@@ -11,7 +11,7 @@ function Achievements() {
     ]
 
   return (
-    <div className='bg-[#1A1C2B]'>
+    <div className='bg-[#1A1C2B] py-10'>
         <div className='tailwind-container mx-auto'>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-10 items-center text-center">
   {data.map((item, index) => (
