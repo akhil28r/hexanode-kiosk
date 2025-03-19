@@ -10,7 +10,7 @@ const ToggleTabs = ({ tabs }) => {
   return (
     <div className="my-16 sm:my-18 w-[90%] mx-auto">
       {tabs.map((item, index) => (
-        <div key={index} className=" sm:px-10 mb-2 border border-black">
+        <div key={index} className=" sm:px-10 mb-2 rounded-lg border border-gray-300">
           <button
             className={`flex w-full  items-center justify-between text-left px-5 py-5 font-medium ${
               openIndex === index
@@ -29,7 +29,7 @@ const ToggleTabs = ({ tabs }) => {
                 width="16"
                 height="16"
                 fill="currentColor"
-                class="bi bi-chevron-down"
+                class="bi bi-chevron-up"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -43,7 +43,7 @@ const ToggleTabs = ({ tabs }) => {
                 width="16"
                 height="16"
                 fill="currentColor"
-                class="bi bi-chevron-up"
+                class="bi bi-chevron-down"
                 viewBox="0 0 16 16"
               >
                 <path
