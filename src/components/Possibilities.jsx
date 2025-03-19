@@ -40,16 +40,37 @@ function Possibilities() {
 
   return (
     <div className="tailwind-container mx-auto">
-      <div className="flex items-center mb-10">
-        <p className="text-center text-[32px] font-bold">
+      <div className="flex justify-center items-center mb-10 md:mb-20">
+        <p className="text-center text-[32px] font-bold max-w-[800px]">
           What additional possibilities does the Kiosk mode offer?
         </p>
       </div>
-      <div className=" flex flex-col-reverse lg:flex-row items-start gap-10 pb-10">
-        {/* Right Side: Accordion */}
+
+      <div className="flex flex-col lg:flex-row items-start gap-10 pb-10">
+        {/* Left Side: Image (visible on large screens) */}
+        <div className="hidden lg:flex flex-1 justify-start">
+          <img
+            src={data[openIndex]?.img}
+            alt={data[openIndex]?.heading}
+            className="w-full max-w-lg rounded-lg shadow-md"
+          />
+        </div>
+
+
         <div className="flex-1 w-full">
           {data.map((item, index) => (
-            <div key={index} className="mb-4">
+            <div key={index} className="mb-6 rounded-lg ">
+
+              {openIndex === index && (
+                <div className="lg:hidden">
+                  <img
+                    src={item.img}
+                    alt={item.heading}
+                    className="w-full h-auto rounded-t-lg"
+                  />
+                </div>
+              )}
+
               <button
                 className="w-full text-left px-6 py-4 font-medium flex justify-between items-center"
                 onClick={() => toggleAccordion(index)}
@@ -64,15 +85,6 @@ function Possibilities() {
               )}
             </div>
           ))}
-        </div>
-
-        {/* Left Side: Image */}
-        <div className="flex-1 flex items-start justify-start md:justify-center md:items-center w-full">
-          <img
-            src={data[openIndex]?.img}
-            alt={data[openIndex]?.heading}
-            className="w-full max-w-md rounded-lg shadow-md"
-          />
         </div>
       </div>
     </div>

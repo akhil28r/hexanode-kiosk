@@ -15,11 +15,11 @@ function App() {
     <div>
       <Navbar/>
       <Hero/>
-      {/* <Achievements/> */}
+      <Achievements/>
       <TabSection/>
+      <Possibilities/>
       <WhyHexnode/>
       <Platforms/>
-      <Possibilities/>
       <ReachOut/>
       <Footer/>
     </div>
