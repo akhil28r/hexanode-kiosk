@@ -32,7 +32,7 @@ function Possibilities() {
     },
   ];
 
-  const [openIndex, setOpenIndex] = useState(0); // Default to first item open
+  const [openIndex, setOpenIndex] = useState(0); 
 
   const toggleAccordion = (index) => {
     setOpenIndex(index);
@@ -47,7 +47,6 @@ function Possibilities() {
       </div>
 
       <div className="flex flex-col lg:flex-row items-start gap-10 pb-10">
-        {/* Left Side: Image (visible on large screens) */}
         <div className="hidden lg:flex flex-1 justify-start">
           <img
             src={data[openIndex]?.img}

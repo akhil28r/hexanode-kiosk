@@ -1,4 +1,3 @@
-"use client";
 import React, { useState } from "react";
 import tab1 from "../assets/tab1.webp";
 import tab2 from "../assets/tab2.webp";
@@ -67,19 +66,16 @@ function TabSection() {
     },
   ];
 
-  // Find active tab data
   const tabData = tabs.find((tab) => tab.id === activeTab);
 
   return (
     <div className="overflow-hidden overflow-x-auto scroll-smooth">
-      {/* Heading */}
       <div className="flex justify-center my-10">
         <h1 className="text-center font-bold text-4xl">
           Specific kiosk modes for unique use cases
         </h1>
       </div>
       <div className=" hidden md:block tailwind-container mx-auto">
-        {/* Tabs Section */}
         <div className="w-full flex">
           {tabs.map((tab) => (
             <button
@@ -97,9 +93,7 @@ function TabSection() {
           ))}
         </div>
 
-        {/* Tab Content Section */}
         <div className="flex flex-col-reverse lg:flex-row items-center lg:justify-between gap-8 p-6">
-          {/* Left Side: Title & List */}
           <div className="lg:w-[70%] text-left">
             <h2 className="text-2xl font-bold text-gray-800">
               {tabData?.content}
@@ -126,7 +120,6 @@ function TabSection() {
             </ul>
           </div>
 
-          {/* Right Side: Image */}
           <div className="flex max-w-[360px] lg:max-w-auto lg:min-w-[400px}">
             <img
               src={tabData?.image}

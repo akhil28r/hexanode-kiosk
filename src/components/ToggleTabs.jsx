@@ -1,4 +1,3 @@
-"use client";
 import { useState } from "react";
 
 const ToggleTabs = ({ tabs }) => {
@@ -57,7 +56,6 @@ const ToggleTabs = ({ tabs }) => {
 
           {openIndex === index && (
             <div className="flex flex-col-reverse lg:flex-row items-center lg:justify-between gap-8 p-6">
-              {/* Left Side: Title & List */}
               <div className="lg:w-[70%] text-left">
                 <h2 className="text-2xl font-bold text-gray-800">
                   {tabs[index]?.content}
@@ -84,7 +82,6 @@ const ToggleTabs = ({ tabs }) => {
                 </ul>
               </div>
 
-              {/* Right Side: Image */}
               <div className="flex max-w-[360px] lg:max-w-auto lg:min-w-[400px]">
                 <img
                   src={tabs[index]?.image}

@@ -26,11 +26,11 @@ function Carousel() {
         dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 6, // Show multiple slides at once
+        slidesToShow: 6, 
         slidesToScroll: 1,
-        autoplay: true, // Enable auto sliding
+        autoplay: true, 
         autoplaySpeed: 2000,
-        arrows: false, // Hide arrows if needed
+        arrows: false,
     };
 
     return (

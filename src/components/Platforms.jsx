@@ -1,4 +1,3 @@
-'use client'
 import React from 'react'
 import platform1 from "../assets/platform1.webp"
 import platform2 from "../assets/platform2.svg"
