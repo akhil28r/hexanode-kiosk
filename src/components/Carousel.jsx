@@ -34,7 +34,7 @@ function Carousel() {
     };
 
     return (
-        <div className="w-full px-12 py-20">
+        <div className="w-full px-12">
             <Slider {...settings}>
                 {brands.map((item, index) => (
                     <div key={index} className="flex justify-center items-center">

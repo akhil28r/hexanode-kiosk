@@ -30,56 +30,60 @@ function Possibilities() {
       content:
         "Provide a smooth and intuitive interface that enhances user engagement and satisfaction.",
     },
+    {
+      img: possibility2,
+      heading: "Customized interface for brand visibility",
+      content:
+        "Create a locked-down environment with customized interface. Maximize brand visibility and leave a lasting impression by showcasing products, services and key messages directly to users through the customized interface.",
+    },
   ];
 
-  const [openIndex, setOpenIndex] = useState(0); 
+  const [openIndex, setOpenIndex] = useState(0);
 
   const toggleAccordion = (index) => {
     setOpenIndex(index);
   };
 
   return (
-    <div className="tailwind-container mx-auto">
-      <div className="flex justify-center items-center mb-10 md:mb-20">
-        <p className="text-center text-[32px] font-bold max-w-[800px]">
+    <div className="tailwind-container mx-auto md:mt-20">
+      <div className="flex justify-center items-center mb-10">
+        <p className="text-center text-[42px] font-bold max-w-[800px]">
           What additional possibilities does the Kiosk mode offer?
         </p>
       </div>
 
-      <div className="flex flex-col lg:flex-row items-start gap-10 pb-10">
-        <div className="hidden lg:flex flex-1 justify-start">
+      <div className="flex flex-col lg:flex-row items-start gap-5">
+        <div className="hidden lg:flex flex-1 justify-center items-center">
           <img
             src={data[openIndex]?.img}
             alt={data[openIndex]?.heading}
-            className="w-full max-w-lg rounded-lg shadow-md"
+            className="w-full max-w-xl rounded-lg shadow-md"
           />
         </div>
 
-
-        <div className="flex-1 w-full">
+        <div className="flex-1 w-full mb-10">
           {data.map((item, index) => (
-            <div key={index} className="mb-6 rounded-lg ">
-
+            <div key={index} className="mb-5 rounded-lg  ">
               {openIndex === index && (
                 <div className="lg:hidden">
                   <img
                     src={item.img}
                     alt={item.heading}
-                    className="w-full h-auto rounded-t-lg"
+                    className="w-full object-cover sm:object-contain h-[300px] rounded-t-lg"
                   />
                 </div>
               )}
 
               <button
-                className="w-full text-left px-6 py-4 font-medium flex justify-between items-center"
+                className="w-full text-left md:px-6 py-4  flex justify-between items-center"
                 onClick={() => toggleAccordion(index)}
               >
-                <h2 className="text-[30px] font-bold">{item.heading}</h2>
+                <h1 className="text-[30px] font-bold">{item.heading}</h1>
               </button>
 
               {openIndex === index && (
-                <div className="px-6 py-4">
-                  <p className="text-gray-700">{item.content}</p>
+                <div className="md:px-4 ">
+                  <p className="text-gray-700 text-lg">{item.content}</p>
                 </div>
               )}
             </div>

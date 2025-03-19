@@ -3,7 +3,7 @@ import React from "react";
 function ReachOut() {
   return (
     <div className="bg-[#020a19] flex flex-col justify-center items-center py-20">
-      <h1 className="text-white font-bold text-[30px] md:text-[42px] text-center px-5">
+      <h1 className="text-white font-bold text-[30px] md:text-[42px] text-center px-5 pb-10">
         Sign up and try Hexnode free for 14 days!
       </h1>
       <div className="mx-10 mt-5">

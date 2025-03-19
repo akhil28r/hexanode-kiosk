@@ -26,7 +26,7 @@ function Achievements() {
           {data.map((item, index) => (
             <div
               key={index}
-              className={`md:my-10 md:px-6 lg:px-10 flex flex-col items-center ${
+              className={`md:my-10 md:px-6 lg:px-10 flex flex-col items-center transition-transform duration-300 ease-in-out hover:translate-y-[-10px] ${
                 index !== data.length - 1
                   ? "md:border-r-[1px] md:border-[rgb(255,255,255,60%)]"
                   : ""
@@ -36,6 +36,7 @@ function Achievements() {
               <p className="text-[rgb(255,255,255,60%)] mt-5 text-sm leading-5 ">
                 {item.text}
               </p>
+              <div className="w-[107px] h-[1px] bg-[rgba(255,255,255,0.2)] md:w-[1px] md:h-[80%] mt-10 md:mx-5"></div>
             </div>
           ))}
         </div>

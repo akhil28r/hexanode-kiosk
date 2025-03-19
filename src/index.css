@@ -3,8 +3,8 @@
 body {
     font-family: 'Mulish', sans-serif;
 }
-
-@media screen and (min-width: 1536px) { .tailwind-container { max-width: 85% !important; } } 
+@media screen and (min-width: 1901px) { .tailwind-container { max-width: 60% !important; } } 
+@media screen and (min-width: 1536px) and (max-width: 1900px){ .tailwind-container { max-width: 80% !important; } } 
 @media screen and (min-width: 1280px) and (max-width: 1535px) { .tailwind-container { max-width: 90% !important; } } 
 @media screen and (min-width: 1024px) and (max-width: 1279px) { .tailwind-container { max-width: 90% !important; } } 
 @media screen and (min-width: 768px) and (max-width: 1023px) { .tailwind-container { max-width: 90% !important; } }

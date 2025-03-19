@@ -34,13 +34,13 @@ function WhyHexnode() {
   };
 
   return (
-    <div className="bg-[#F7F7F7] min-h-screen flex flex-col items-center justify-center pt-20 ">
+    <div className="bg-[#F7F7F7] py-16 flex flex-col items-center justify-center  ">
 
-      <h1 className="text-[#020a19] font-bold text-4xl pb-10 text-center">
+      <h1 className="text-[#020a19] font-bold text-4xl mb-10 md:py-10 w-[80%] text-center">
         Why should you choose Hexnode?
       </h1>
 
-      <div className="tailwind-container mx-auto relative flex flex-col items-center justify-center  max-w-4xl">
+      <div className="tailwind-container mx-auto relative flex flex-col items-center justify-center  max-w-4xl mb-10">
         <div className="md:w-full z-10 flex flex-col md:flex-row items-center bg-white rounded-2xl shadow-lg overflow-hidden">
           <div className=" w-full  md:w-1/3">
             <img
