@@ -1,0 +1,31 @@
+{
+  "hash": "7d93b23b",
+  "configHash": "a8247bd0",
+  "lockfileHash": "ef6428a8",
+  "browserHash": "e73357aa",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "985a317a",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "79530f5a",
+      "needsInterop": true
+    },
+    "react-slick": {
+      "src": "../../node_modules/react-slick/lib/index.js",
+      "file": "react-slick.js",
+      "fileHash": "e1609847",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "chunk-TXTLLP5N": {
+      "file": "chunk-TXTLLP5N.js"
+    }
+  }
+}
