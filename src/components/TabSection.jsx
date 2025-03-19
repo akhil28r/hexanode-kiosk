@@ -69,18 +69,18 @@ function TabSection() {
   const tabData = tabs.find((tab) => tab.id === activeTab);
 
   return (
-    <div className="overflow-hidden overflow-x-auto scroll-smooth">
+    <div className=" tailwind-container mx-auto overflow-hidden overflow-x-auto scroll-smooth">
       <div className="flex justify-center my-10">
-        <h1 className="text-center font-bold text-4xl">
+        <h1 className=" text-center font-bold text-4xl">
           Specific kiosk modes for unique use cases
         </h1>
       </div>
-      <div className=" hidden md:block tailwind-container mx-auto">
+      <div className=" hidden md:block ">
         <div className="w-full flex">
           {tabs.map((tab) => (
             <button
               key={tab.id}
-              className={`flex-1 py-3 text-lg font-medium text-center transition-colors duration-300 ease-in-out
+              className={`flex-1 py-3 text-md font-medium text-center transition-colors duration-300 ease-in-out
           ${
             activeTab === tab.id
               ? "bg-black text-white border-b-2"
@@ -98,18 +98,18 @@ function TabSection() {
             <h2 className="text-2xl font-bold text-gray-800">
               {tabData?.content}
             </h2>
-            <ul className="mt-4 space-y-2">
+            <ul className="mt-4 space-y-2 ">
               {tabData?.list.map((item, index) => (
                 <li
                   key={index}
-                  className="text-gray-600 text-lg flex items-stretch gap-2"
+                  className="text-gray-600 text-lg flex items-start gap-2"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
                     height="16"
                     fill="green"
-                    className="bi bi-check-lg"
+                    className="bi bi-check-lg mt-[4px]"
                     viewBox="0 0 16 16"
                   >
                     <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z" />

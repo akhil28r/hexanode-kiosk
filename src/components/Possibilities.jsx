@@ -52,16 +52,16 @@ function Possibilities() {
         </p>
       </div>
 
-      <div className="flex flex-col lg:flex-row items-start gap-5">
-        <div className="hidden lg:flex flex-1 justify-center items-center">
+      <div className="flex flex-col lg:flex-row items-center gap-5">
+        <div className="hidden lg:flex flex-1 md:max-w-[545px] max-h-[545px] justify-center items-center">
           <img
             src={data[openIndex]?.img}
             alt={data[openIndex]?.heading}
-            className="w-full max-w-xl rounded-lg shadow-md"
+            className=" rounded-lg shadow-md max-w-[500px] max-h-[500px]"
           />
         </div>
 
-        <div className="flex-1 w-full mb-10">
+        <div className="flex-1 w-full mb-10 ">
           {data.map((item, index) => (
             <div key={index} className="mb-5 rounded-lg  ">
               {openIndex === index && (
@@ -69,7 +69,7 @@ function Possibilities() {
                   <img
                     src={item.img}
                     alt={item.heading}
-                    className="w-full object-cover sm:object-contain h-[300px] rounded-t-lg"
+                    className="w-full object-cover sm:object-contain max-w-[500px] max-h-[500px]  rounded-t-lg"
                   />
                 </div>
               )}
@@ -82,8 +82,24 @@ function Possibilities() {
               </button>
 
               {openIndex === index && (
-                <div className="md:px-4 ">
-                  <p className="text-gray-700 text-lg">{item.content}</p>
+                <div className="md:pl-7">
+                  <p className="text-[#333333] text-lg">{item.content}</p>
+                  <span className="text-[#DD0735]  inline-flex items-center font-semibold mt-3 gap-2">TRY FOR FREE
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-chevron-right"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"
+                      />
+                    </svg>
+                    
+                  </span>
                 </div>
               )}
             </div>
